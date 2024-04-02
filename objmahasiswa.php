@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <CENTEr>
 <H1>INPUT NILAI MAHASISWA</H1>
-<form method="post" action="objmahasiswa.php">
+<form method="post" action="cetak.php">
   <div class="form-group row">
     <label for="nim" class="col-4 col-form-label">NIM</label> 
     <div class="col-4">
@@ -66,34 +66,8 @@ require_once 'mhsiswa.php';
     $nilai = $_POST['nilai'];
 
 // objek
-$mhs = new mhsiswa($nim, $nama, $kuliah, $matkul);
- $mhs->setNilai($nilai);
 
-echo '
-    <h1 align=center>DAFTAR NILAI MAHASISWA</h1>
-    <table border="3" align="center" cellpadding ="10" style="background-color:chartreuse;" width="80%"> 
-        <tr>
-            <th>NIM</th>
-            <th>Nama</th>
-            <th>Universitas</th>
-            <th>Mata Kuliah</th>
-            <th>Nilai</th>
-            <th>Grade</th>
-            <th>Predikat</th>
-            <th>Status</th>
-        </tr>
-        <tr>
-            <td>' . $mhs->nim . '</td>
-            <td>' . $mhs->nama . '</td>
-            <td>' . $mhs->kuliah . '</td>
-            <td>' . $mhs->matkul. '</td>
-            <td>' . $mhs->nilai . '</td>
-            <td>' . $mhs->grade . '</td>
-            <td>' . $mhs->predikat . '</td>
-            <td>' . $mhs->status . '</td>
-        </tr>
-    </table>
-</body>
-</html>'
+
+
 ?>
  
